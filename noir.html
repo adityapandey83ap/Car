@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>  | Drive Luxury</title>
+<style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+nav h2 {
+    color: lavender;
+    letter-spacing: 2px;
+}
+
+nav h3 {
+    color: lavender;
+    font-size: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-image: url("car1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.home h1 {
+    font-size: 140px;
+}
+
+.home h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: white;
+}
+
+.about, .collection, .more, .contact {
+    padding: 100px 10%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+.about h1 {
+    font-size: 40px;
+    margin-top: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+}
+
+footer h4 {
+    color: lavender;
+}
+
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.email input {
+    border: 2px solid red;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.email button {
+    border: 2px solid black;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.email button:hover {
+    background-color: white;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<h2> logo </h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#collection">Collection</a></li>
+<li><a href="#more">More</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="section">
+<div class="home">
+<h1><span style="color: red;"></span></h1>
+<h3>The Queen of Luxury <span style="color: grey;">|</span> Drive at <span style="color: red;">Peak</span></h3>
+</div>
+</section>
+
+<section id="about" class="about">
+<div>
+<h1><span style="color:red">A</span>bout</h1>
+<p>
+True luxury cannot be mass-produced; it must be curated. From our inception, we have stood at the intersection of timeless art and peerless craftsmanship.
+</p>
+</div>
+</section>
+
+<section id="collection" class="image-section">
+<a href="car1.html">
+<img src="car1.jpg">
+</a>
+<a href="car2.html">
+<img src="car2.jpg" alt="Image 1">
+</a>
+<a href="car3.html">
+<img src="car3.jpg" alt="Image 2">
+</a>
+<a href="car4.html">
+<img src="car4.jpg" alt="Image 3">
+</a>
+<a href="car5.html">
+<img src="car5.jpg" alt="Image 4">
+</a>
+<a href="car6.html">
+<img src="car6.jpg" alt="Image 5">
+</a>
+</section>
+<section id="more" class="more">
+<h1><span style="color:red">M</span>ore</h1><br><br>
+<p style="color:white;">Discover the heritage, atelier experience, and custom tailoring options.</p>
+</section>
+
+<section id="contact" class="contact">
+<h1><span style="color:red">C</span>ontact</h1><br><br>
+<p style="color:white;">Get in touch with our private client advisors.</p>
+
+<br><br><br>
+
+<div class="email">
+<input type="text" placeholder="Write your message here!">
+<button style="background-color:red" onclick="alert('Your Message has been Sended')">Send</button>
+</div>
+
+</section>
+
+<footer>
+<h4>Thank You !</h4>
+</footer>
+
+</body>
+</html>

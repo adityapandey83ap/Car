@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car 1 | Noir</title>
+<style>
+  body { background: black; color: white; font-family: Arial, sans-serif; padding: 40px 10%; }
+  h1 { color: lavender; margin: 20px 0; }
+  p { line-height: 1.8; margin-bottom: 10px; }
+  a { color: red; text-decoration: none; }
+
+  .slider {
+    position: relative;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slider img.active { opacity: 1;}
+
+.prev { 
+  left: 15px;
+  color: white;
+  background-color: black;
+}
+.next { 
+  right: 15px;
+  color: white;
+  background-color: black;
+}
+
+</style>
+</head>
+<body>
+  <a href="noir.html#collection">← Back to collection</a>
+  <h1>  BUGATTI LA VOITURE NOIRE </h1>
+
+  <div class="slider">
+      <img class="active" src="car1.jpg" alt="Car view 1">
+      <img src="car2.jpg" alt="Car view 2 ">
+      <img src="car3.jpg" alt="Car view 3 ">
+      <img src="car4.jpg" alt="Car view 4 ">
+      <img src="car5.jpg" alt="Car view 5 ">
+      <img src="car6.jpg" alt="Car view 6 ">
+
+      
+  </div>
+  <button class="prev" onclick="changeSlide(-1)">&laquo;</button>
+      <button class="next" onclick="changeSlide(-1)">&raquo;</button>
+  <p><b>Engine:</b> 8.0-Lt (7,993 cc) W16</p>
+  <p><b>Top Speed:</b> 420 km/h</p>
+  <p><b>Price:</b> ₹ 185.88 Cr</p>
+
+
+  <script>
+  const slides = document.querySelectorAll('.slider img');
+  let current = 0;
+  let timer = setInterval(() => changeSlide(1), 2000);
+
+  function changeSlide(step) {
+    slides[current].classList.remove('active');
+    current = (current + step + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    clearInterval(timer);
+    timer = setInterval(() => changeSlide(1), 2000);
+  }
+  </script>
+</body>
+</html>
