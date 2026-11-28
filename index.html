@@ -1,0 +1,450 @@
+<html>
+<head>
+<title> Voltax | Drive Luxury</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+nav h2 {
+    color: lavender;
+    letter-spacing: 2px;
+}
+
+nav h3 {
+    color: lavender;
+    font-size: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-image: url("car1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.home h1 {
+    font-size: 140px;
+}
+
+.home h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: white;
+}
+
+.about, .collection, .more, .contact {
+    padding: 100px 10%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+.about h1 {
+    font-size: 40px;
+    margin-top: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+}
+
+footer h4 {
+    color: lavender;
+}
+
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.email input {
+    border: 2px solid red;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.email button {
+    border: 2px solid black;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.email button:hover {
+    background-color: white;
+    color: white;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+footer {
+    padding: 60px 10% 20px;
+    background-color: #0a0a0a;
+    border-top: 2px solid rgb(119, 113, 107);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col h2 {
+    color: lavender;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-col h4 {
+    color: lavender;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+
+.footer-col a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover { color: red; }
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+.footer-bottom p { color: #777; font-size: 14px; }
+
+.contact-sub {
+    color: #bbb;
+    margin: 15px 0 50px;
+}
+
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 35px;
+    background: #0d0d0d;
+    border: 1px solid #222;
+    border-left: 3px solid red;
+    border-radius: 10px;
+}
+
+.info-item h4 {
+    color: rgb(190, 167, 167);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.info-item p { color: #ddd; }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 14px 16px;
+    background: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: red;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+}
+
+.contact-form textarea { resize: vertical; }
+
+.contact-form button {
+    padding: 14px;
+    background: rgb(241, 119, 139);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: red;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.35);
+}
+
+#formNote { color: lavender; font-size: 14px; min-height: 20px; }
+
+@media (max-width: 800px) {
+    .contact-wrap { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">
+    <img src="logo.png" alt="logo" >
+</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#collection">Collection</a></li>
+<li><a href="#more">More</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="section">
+<div class="home">
+<h1><span style="color: red;"></span></h1>
+<h3>The Queen of Luxury <span style="color: grey;">|</span> Drive at <span style="color: red;">Peak</span></h3>
+</div>
+</section>
+
+<section id="about" class="about">
+<div>
+<h1><span style="color:red">A</span>bout</h1>
+<p>
+True luxury cannot be mass-produced; it must be curated. From our inception, we have stood at the intersection of timeless art and peerless craftsmanship.
+</p>
+</div>
+</section>
+
+<section id="collection" class="image-section">
+<a href="car1.html">
+<img src="car1.jpg">
+</a>
+<a href="car2.html">
+<img src="car21.jpg" alt="Image 1">
+</a>
+<a href="car3.html">
+<img src="car31.jpg" alt="Image 2">
+</a>
+<a href="car4.html">
+<img src="car41.jpg" alt="Image 3">
+</a>
+<a href="car5.html">
+<img src="car5.jpg" alt="Image 4">
+</a>
+<a href="car6.html">
+<img src="car6.jpg" alt="Image 5">
+</a>
+</section>
+<section id="more" class="more">
+<h1><span style="color:red">M</span>ore</h1><br><br>
+<p style="color:white;">Discover the heritage, atelier experience, and custom tailoring options.</p>
+</section>
+
+<section id="contact" class="contact">
+  <h1><span style="color:red">C</span>ontact</h1>
+  <p class="contact-sub">Get in touch with our private client advisors.</p>
+
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="info-item">
+        <h4>Visit</h4>
+        <p> Luxury cars - Marin , Mumbai</p>
+      </div>
+      <div class="info-item">
+        <h4>Call</h4>
+        <p>+91 98765 43210</p>
+      </div>
+      <div class="info-item">
+        <h4>Email</h4>
+        <p>info@noir.com</p>
+      </div>
+      <div class="info-item">
+        <h4>Hours</h4>
+        <p>Mon - Sat, 10:00 - 19:00</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <input type="text" id="Name" placeholder="Your name">
+      <input type="email" id="Email" placeholder="Your email">
+      <select id="Interest">
+        <option value="">I'm interested in...</option>
+        <option>Private viewing</option>
+        <option>Custom tailoring</option>
+        <option>Purchase inquiry</option>
+        <option>Other</option>
+      </select>
+      <textarea id="message" rows="5" placeholder="Write your message here!"></textarea>
+      <button onclick="sendMessage()">Send Message</button>
+      <p id="formNote"></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h2>NOIR</h2>
+      <p>Experience the art of exceptional driving. Discover premium automobiles, refined quality , and effortless elegance. Where luxury meets the road.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>info@noir.com</p>
+      <p>+91 98765 43210</p>
+      <p>Gorakhpur - UP , INDIA</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p></p>
+  </div>
+</footer>
+
+
+<script>
+function sendMessage() {
+  const name = document.getElementById('Name').value.trim();
+  const email = document.getElementById('Email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  const note = document.getElementById('formNote');
+
+  if (!name || !email || !msg) {
+    note.style.color = 'white';
+    note.textContent = 'Please fill in your name, email and message.';
+    return;
+  }
+
+  note.style.color = 'lavender';
+  note.textContent = 'Thank you, ' + name + '. Our advisor will contact you soon.';
+  document.getElementById('Name').value = '';
+  document.getElementById('Email').value = '';
+  document.getElementById('message').value = '';
+}
+</script>
+</body>
+</html>
